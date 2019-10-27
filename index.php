@@ -25,7 +25,7 @@
         <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="2">
 
         <button type="submit" class="button" tabindex="4">Sign in</button>
-        <a href="forgot_u.php" id="mdp_forgot">Forgot your password</a>
+        <a href="forgot_username.php" id="mdp_forgot">Forgot your password</a>
         <br/>
         <br/>
         <br/>

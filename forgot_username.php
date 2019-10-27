@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"forgot_u.php\";</script>";}
+  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"forgot_username.php\";</script>";}
   include_once 'header.php';
 ?>
 <title>Camagru | Change password</title>

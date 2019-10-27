@@ -21,7 +21,7 @@
   }
   
   if (!$sth->fetchColumn()) {
-      header("Location: ../index.php?err=Le compte n'existe pas.\n");
+      header("Location: ../index.php?err=Account does not exist.\n");
       exit();
   }
   $passwd = hash(SHA256, $_POST[passwd]);
@@ -47,7 +47,7 @@
           echo 'Error: '.$e->getMessage();
           exit;
       }
-      header("Location: ../index.php?err=Votre mot de passe a ete correctement change.\n");
+      header("Location: ../index.php?err=Your password has been changed.\n");
   } else {
-      header("Location: ../index.php?err=Erreur.\n");
+      header("Location: ../index.php?err=Error.\n");
   }

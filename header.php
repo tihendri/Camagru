@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="camagru.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <div class="wrapper">
