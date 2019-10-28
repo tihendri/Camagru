@@ -84,6 +84,7 @@ try {
       id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
       login_ VARCHAR(255) NOT NULL,
       img_id VARCHAR(255) NOT NULL)";
+    $conn->exec($sql);
     echo "Table 'likes' created successfully.<br>";
     $conn = NULL;
 }
