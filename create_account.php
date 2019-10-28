@@ -15,7 +15,7 @@
       <label><b>Password</b></label>
       <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="3">
 
-      <label><b>Repeat your password</b></label>
+      <label><b>Retype your password</b></label>
       <input class="form" type="password" placeholder="Enter Password" name="passwd2" required tabindex="4">
 
       <button type="submit" class="button" tabindex="5">Create Account</button>

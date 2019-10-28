@@ -1,49 +1,96 @@
 <?php
   include_once 'database.php';
 try {
-    $DB = explode(';', $DB_DSN);
-    $database = substr($DB[1], 7);
-    $dbh = new PDO("$DB[0]", $DB_USER, $DB_PASSWORD);
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $dbh->exec("CREATE DATABASE IF NOT EXISTS $database");
-    echo "Database '$database' created successfully.<br>";
-    $dbh->exec("use $database");
+// Create database
+    $conn = new PDO("mysql:host=$DB_DSN", $DB_USER, $DB_PASSWORD);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "CREATE DATABASE IF NOT EXISTS Camagru";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "Database created successfully<br>";
+}   catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
     
-    // Create the table for the users
-    $dbh->exec("CREATE TABLE IF NOT EXISTS users (
-      id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login VARCHAR(255) NOT NULL,
-      mail VARCHAR(255) NOT NULL,
-      passwd VARCHAR(255) NOT NULL,
-      state VARCHAR(255) NOT NULL,
-      forgot VARCHAR(255) DEFAULT 'NULL')");
-      echo "Table 'users' created successfully.<br>";
+
+try {
+// Create the table for the users named Camagruers.
+    $conn = new PDO("mysql:host=$DB_DSN;dbname=$DB_NAME", $DB_USER, $DB_PASSWORD);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // sql to create table
+    $sql = "CREATE TABLE IF NOT EXISTS Camagruers   (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(30) NOT NULL,
+    lastname VARCHAR(30) NOT NULL,
+    email VARCHAR(50),
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "Table 'camagruers' created successfully<br>";
+}   catch(PDOException $e) {
+      echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = null;
     
-      // Create the table for the pictures
-    $dbh->exec("CREATE TABLE IF NOT EXISTS pictures  (
+    
+try {
+// Create the table for the pictures
+    $conn = new PDO("mysql:host=$DB_DSN;dbname=$DB_NAME", $DB_USER, $DB_PASSWORD);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      // sql to create table
+    $sql = "CREATE TABLE IF NOT EXISTS Pictures (
       id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login VARCHAR(255) NOT NULL,
-      img VARCHAR(255) NOT NULL)");
+      login_ VARCHAR(255) NOT NULL,
+      img VARCHAR(255) NOT NULL)";
+    $conn->exec($sql);
     echo "Table 'pictures' created successfully.<br>";
-    
-    // Create the table for the comments
-    $dbh->exec("CREATE TABLE IF NOT EXISTS comments  (
+}   catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = NULL;
+
+
+try {
+// Create the table for the comments
+    $conn = new PDO("mysql:host=$DB_DSN;dbname=$DB_NAME", $DB_USER, $DB_PASSWORD);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // sql to create table
+    $sql = "CREATE TABLE IF NOT EXISTS Comments (
       id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login VARCHAR(255) NOT NULL,
+      login_ VARCHAR(255) NOT NULL,
       img_id VARCHAR(255) NOT NULL,
-      comment VARCHAR (255) NOT NULL)");
+      comment VARCHAR (255) NOT NULL)";
+    $conn->exec($sql);
     echo "Table 'comments' created successfully.<br>";
+}   catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+    $conn = NULL;
     
-    // Create the table for the likes
-    $dbh->exec("CREATE TABLE IF NOT EXISTS likes  (
+    
+try {
+// Create the table for the likes
+    $conn = new PDO("mysql:host=$DB_DSN;dbname=$DB_NAME", $DB_USER, $DB_PASSWORD);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // sql to create table
+    $sql = "CREATE TABLE Likes  (
       id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login VARCHAR(255) NOT NULL,
-      img_id VARCHAR(255) NOT NULL)");
+      login_ VARCHAR(255) NOT NULL,
+      img_id VARCHAR(255) NOT NULL)";
     echo "Table 'likes' created successfully.<br>";
-} catch (PDOException $e) {
-    echo $sql.'<br>'.$e->getMessage();
+    $conn = NULL;
 }
-  $dbh = null;
+catch(PDOException $e) {
+    echo $sql . "<br>" . $e->getMessage();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,7 +100,7 @@ try {
   </head>
   <body>
     <form action="../" class="inline">
-        <button autofocus="autofocus" tabindex="1">Index</button>
+        <button autofocus="autofocus" tabindex="1">Home</button>
     </form>
   </body>
 </html>

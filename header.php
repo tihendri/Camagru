@@ -13,7 +13,7 @@
     <header class="header">
         <a href="index.php" id="title"><h1>Camagru</h1></a>
         <ul class="navbar">
-            <li><a href="index.php">Index</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="filters.php">Filters</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <?php if ($_SESSION[Username] && !empty($_SESSION[Username])): ?>

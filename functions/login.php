@@ -3,7 +3,7 @@
   header('Location: ../index.php');
   include_once '../config/database.php';
   if (empty($_POST[login]) || empty($_POST[passwd])) {
-      header("Location: ../index.php?err=Please fill in all the fields.\n");
+      header("Location: ../index.php?err=You must create an account first!.\n");
       exit();
   }
   try {

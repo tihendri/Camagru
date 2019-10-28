@@ -2,7 +2,7 @@
   header('Location: ../index.php');
   include_once '../config/database.php';
   if (empty($_POST[login]) || empty($_POST[passwd]) || empty($_POST[passwd2]) || empty($_POST[email]) || empty($_POST[hash])) {
-      header("Location: ../index.php?err=Please fill in all the blanks.\n");
+      header("Location: ../index.php?err=Error! Not connected to database.\n");
       exit();
   }
   if ($_POST[passwd] != $_POST[passwd2]) {

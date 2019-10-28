@@ -2,7 +2,7 @@
   header('Location: ../index.php');
   include_once '../config/database.php';
   if (empty($_POST[login]) || empty($_POST[mail]) || empty($_POST[passwd]) || empty($_POST[passwd2])) {
-      header("Location: ../create.php?err=Fill in empty spaces.\n");
+      header("Location: ../functions/create.php?err=Fill in empty spaces.\n");
       exit();
   }
   try {
