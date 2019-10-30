@@ -50,20 +50,20 @@ $email = $_POST['email'];
 
   } catch (PDOException $e) {
       echo 'Error: '.$e->getMessage();
-      exit;
+   //   exit;
   }
   
-//   $to = $_POST[mail];
-//   $subject = 'Camagru | Registration';
-//   $message = "
-//   Your account has successfully been created. Your credential is as follows:
-//   ------------------------
-//   Username: '$_POST[login]'
-//   ------------------------
-//   Click on the following link to activate your account
-//   http://localhost:8080/Camagru/verify.php?email=$_POST[mail]&hash=$hash
-//   ";
-//   $headers = 'From:tihendri@student.wethinkcode.co.za'."\r\n";
-//   mail($to, $subject, $message, $headers);
-//   header("Location: ../index.php?err=Your account was created. Please activate it with the link sent to your email.\n");
+  $to = $_POST['email'];
+  $subject = 'Camagru | Registration';
+  $message = "
+  Your account has successfully been created. Your credential is as follows:
+  ------------------------
+  Username: '$_POST[login]'
+  ------------------------
+  Click on the following link to activate your account
+  http://localhost:8080/Camagru/verify.php?email=$_POST[mail]&hash=$hash
+  ";
+  $headers = 'From:tihendri@student.wethinkcode.co.za'."\r\n";
+  mail($to, $subject, $message, $headers);
+  //header("Location: ../index.php?err=Your account was created. Please activate it with the link sent to your email.\n");
 }
