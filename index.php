@@ -30,7 +30,7 @@
         <br/>
         <br/>
         <div class="strike"><span>New?</span></div>
-        <button class="button" id="button_new" onclick="location.href = 'create_account.php'" tabindex="5">Create your account</button>
+        <button class="button" id="button_new" tabindex="5"><a href="create_account.php">Create your account</a></button>
       </form>
     <?php endif; ?>
   </aside>
