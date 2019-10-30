@@ -33,7 +33,6 @@ $email = $_POST['email'];
   try {
     //  include '../backend/connect_to_db.php';
       $passwd = hash(SHA256, $_POST['passwd']);
-      echo $firstname;
     //   $hash = md5(rand(0, 1000));
     $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
     // set the PDO error mode to exception
@@ -53,7 +52,7 @@ $email = $_POST['email'];
     $message = "
     Your account has successfully been created. Your credential is as follows:
     ------------------------
-    Username: '$_POST[login]'
+    Username: '$_POST[username]'
     ------------------------
     Click on the following link to activate your account
     http://localhost:8080/Camagru/verify.php?email=$_POST[mail]&hash=$hash
