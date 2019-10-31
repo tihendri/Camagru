@@ -8,7 +8,7 @@ include_once 'header.php';
         <button type='submit' class='button'>Sign out</button>
       </form>
     <?php else: ?>
-      <form class="login" action="index.php" method="post">
+      <form class="login" action="login_now.php" method="post">
         <label><b>Username</b></label>
         <input class="form" type="text" placeholder="Enter Username" name="username" required autofocus="autofocus" tabindex="1">
 

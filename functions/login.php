@@ -53,6 +53,7 @@ try {
     //  include '../backend/connect_to_db.php';
     $username = $_POST['username'];
     $passwd = hash(SHA256, $_POST['passwd']);
+   // echo $username." ".$passwd;
     //   $hash = md5(rand(0, 1000));
     $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
     // set the PDO error mode to exception
@@ -61,6 +62,7 @@ try {
         $sql = $conn->prepare("SELECT * FROM camagruers WHERE username = :username");
         $sql->execute(['username' => $username]);
         $data = $sql->fetch();
+        
         if (empty($data) || $username != $data['username'] || $passwd != $data['password_'])
         {
             echo"<script>window.alert('Username or Password invalid!')</script>";
@@ -68,7 +70,7 @@ try {
         
         if ($username == $data['username'] && $passwd == $data['password_'])
         {
-            //echo $username." ".$passwd;
+           // echo $username." ".$passwd;
        // echo $data['username']." ".$data['password_'];
             $_SESSION['email'] = $data['email'];
             $_SESSION['id'] = $data['id'];
