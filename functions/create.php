@@ -54,7 +54,7 @@ validate_password($_POST['passwd']);
     //   $sth->execute();
 
     $to = $_POST['email'];
-    $subject = 'Camagru | Registration';
+    $subject = "Camagru | Registration";
     $message = "
     Your account has successfully been created. Your credential is as follows:
     ------------------------
@@ -63,11 +63,12 @@ validate_password($_POST['passwd']);
     Click on the following link to activate your account
     http://localhost:8080/Camagru/verify.php?email=$_POST[mail]&hash=$hash
     ";
-    $headers = 'From:tihendri@student.wethinkcode.co.za'."\r\n";
+    $headers = "From:tihendri@student.wethinkcode.co.za"."\r\n";
+    echo "<script>window.alert('Email sent.')</script>";
     mail($to, $subject, $message, $headers);
   } catch (PDOException $e) {
       echo 'Error: '.$e->getMessage();
-   //   exit;
+      exit;
   }
   
   //header("Location: ../index.php?err=Your account was created. Please activate it with the link sent to your email.\n");
