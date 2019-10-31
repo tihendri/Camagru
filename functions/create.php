@@ -25,10 +25,16 @@ function create_account() {
 //       header("Location: ../create.php?err=Passwords do not match.\n");
 //       exit();
 //   }
+include "validation.php";
 $firstname = $_POST['firstname'];
+validate_firstname($firstname);
 $lastname = $_POST['lastname'];
+validate_lastname($lastname);
 $username = $_POST['username'];
+//validate_username($username); /////////////////////////////////////// For later
 $email = $_POST['email'];
+validate_email($email);
+validate_password($_POST['passwd']);
   
   try {
     //  include '../backend/connect_to_db.php';
