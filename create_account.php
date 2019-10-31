@@ -1,6 +1,7 @@
 <?php
   if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"create.php\";</script>";}
   include_once 'header.php';
+  session_start();
 ?>
 <title>Camagru | Create an account</title>
   <article class="main">
