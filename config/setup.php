@@ -28,7 +28,8 @@ try {
     username VARCHAR(30) NOT NULL,
     password_ VARCHAR(255) NOT NULL,
     email VARCHAR(50),
-    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    verified BIT default (0) NOT NULL
     )";
     // use exec() because no results are returned
     $conn->exec($sql);

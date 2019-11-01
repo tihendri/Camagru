@@ -7,7 +7,7 @@
 <title>Camagru | Change password</title>
   <article class="main">
 
-    <form class="login" action="functions/change_password.php" method="post">
+    <form class="login" action="forgot_password.php" method="post">
       <label><b>Username</b></label>
       <input class="form" type="text" placeholder="Enter Username" name="login" required autofocus="autofocus" tabindex="1">
 
@@ -27,6 +27,8 @@
       {
         include "functions/forgot_passwd.php";
         log_in();
+        // include "functions/change_password.php";
+        // change_password();
       }
     ?>
   </article>
