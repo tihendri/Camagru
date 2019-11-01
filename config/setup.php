@@ -103,7 +103,7 @@ catch(PDOException $e) {
   </head>
   <body>
     <form action="../" class="inline">
-        <button autofocus="autofocus" tabindex="1">Home</button>
+        <button autofocus="autofocus" tabindex="1">To Camagru Main Site</button>
     </form>
   </body>
 </html>
