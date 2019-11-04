@@ -11,3 +11,10 @@
     
   </aside>
 </div>
+<?php
+    if (isset($_GET['session_status'])) {
+      if ($_GET['session_status'] == "logout") {
+        include "functions/disconnect.php";
+        disconnect();
+      }
+    }
