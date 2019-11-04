@@ -28,6 +28,7 @@ try {
     username VARCHAR(30) NOT NULL,
     password_ VARCHAR(255) NOT NULL,
     email VARCHAR(50),
+    verkey VARCHAR(255) DEFAULT (0) NOT NULL,
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     verified BIT default (0) NOT NULL
     )";
