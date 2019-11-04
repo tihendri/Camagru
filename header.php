@@ -23,6 +23,7 @@
                 }
             ?>
             <?php if ($_SESSION['id']): ?>
+              <li><a href='profile.php'>My profile</a></li>
               <li><a href='index.php?session_status=logout'>Sign out</a></li>
             <?php endif; ?>
         </ul>
