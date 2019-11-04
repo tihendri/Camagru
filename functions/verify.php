@@ -8,12 +8,12 @@ function verify() {
         $get_user_data = $conn->prepare("SELECT * FROM camagruers WHERE verkey = ?");
         $get_user_data->execute([$_GET['key']]);
         $userdata = $get_user_data->fetch();
-        print_r($userdata);
+        // print_r($userdata);
         if ($userdata['verified'] == 1) {
-            $_SESSION['email'] = $userdata['email'];
-            $_SESSION['id'] = $userdata['id'];
-            $_SESSION['username'] = $userdata['username'];
-            echo "<p>Your account has already been verified! Stop mucking about and login.</p>";
+            // $_SESSION['email'] = $userdata['email'];
+            // $_SESSION['id'] = $userdata['id'];
+            // $_SESSION['username'] = $userdata['username'];
+            echo "<p>Your account has already been verified! Stop mucking about and sign in.</p>";
         }
 
         else if ($userdata) {
@@ -33,7 +33,7 @@ function verify() {
         }
     }
     else {
-        echo "<p>No verification code found! Please click on the link sent to you email.</p>";
+        echo "<p>No verification code found! Please click on the link sent to your email.</p>";
     }
 }
 ?>
