@@ -1,6 +1,7 @@
 <?php
   if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"verified.php\";</script>";}
   include_once "header.php";
+  include_once "footer.php";
 ?>
 
 <title>Camagru - Home</title>
@@ -16,11 +17,11 @@
             $get_user_data = $conn->prepare("SELECT * FROM camagruers WHERE verkey = ?");
             $get_user_data->execute([$_GET['key']]);
             $userdata = $get_user_data->fetch();
-            print_r($userdata);
+            // print_r($userdata);
             if ($userdata['verified'] == 1) {
-                $_SESSION['email'] = $userdata['email'];
-                $_SESSION['id'] = $userdata['id'];
-                $_SESSION['username'] = $userdata['username'];
+                // $_SESSION['email'] = $userdata['email'];
+                // $_SESSION['id'] = $userdata['id'];
+                // $_SESSION['username'] = $userdata['username'];
                 echo "<p>Your account has already been verified! Stop mucking about and login.</p>";
             }
     
@@ -29,9 +30,9 @@
                 $verikey = $userdata['verkey'];
                 $update = $conn->prepare("UPDATE camagruers SET verified=1 WHERE email=?");
                 $update->execute([$email]);
-                $_SESSION['email'] = $userdata['email'];
-                $_SESSION['id'] = $userdata['id'];
-                $_SESSION['username'] = $userdata['username'];
+                // $_SESSION['email'] = $userdata['email'];
+                // $_SESSION['id'] = $userdata['id'];
+                // $_SESSION['username'] = $userdata['username'];
                 echo "<p>Your account has successfully been verified. Have a very nice day and login.</p>";
             }
     
