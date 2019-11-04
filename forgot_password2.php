@@ -1,20 +1,19 @@
 <?php
   if ($_GET[err]) {
-      echo '<script>alert("'.htmlentities($_GET[err]).'");window.location.href = "forgot_password.php";</script>';
+      echo '<script>alert("'.htmlentities($_GET[err]).'");window.location.href = "forgot_password2.php";</script>';
   }
   include_once 'header.php';
+  include_once "footer.php";
 ?>
 <title>Camagru | Change password</title>
   <article class="main">
 
-    <form class="login" action="forgot_password.php" method="post">
-      <label><b>Username</b></label>
-      <input class="form" type="text" placeholder="Enter Username" name="login" required autofocus="autofocus" tabindex="1">
+    <form class="login" action="forgot_password2.php" method="post">
 
-      <label><b>Password</b></label>
+      <label><b>New Password</b></label>
       <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="2">
 
-      <label><b>Retype password</b></label>
+      <label><b>Retype New Password</b></label>
       <input class="form" type="password" placeholder="Enter Password" name="passwd2" required tabindex="3">
       <?php if ($_GET['hash'] && $_GET['email']): ?>
         <input type='hidden' name='email' value='<?=$_GET['email']?>'>

@@ -4,10 +4,10 @@
  
  
 function forgot_passwd() { 
-  if (empty($_POST[login])) {
-      header("Location: ../forgot_username.php?err=Please fill in all the spaces.\n");
-      exit();
-  }
+//   if (empty($_POST[login])) {
+//       header("Location: ../forgot_pass.php?err=Please fill in all the spaces.\n");
+//      exit();
+//   }
   try {
       $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
       $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -41,11 +41,12 @@ function forgot_passwd() {
   Username: '$_POST[username]'
   ------------------------
   Click on the following link to reactivate your account with a new password.
-  http://localhost:8080/Camagru/forgot_password.php?email=$to&hash=$hash
+  http://localhost:8080/Camagru/forgot_password2.php?email=$to&hash=$hash
   ";
   $headers = 'From:tihendri@student.wethinkcode.co.za'."\r\n";
   mail($to, $subject, $message, $headers);
-  header("Location: ../index.php?err=To change your password click on the link sent to your email.\n");
+  echo "<script>window.alert('To change your password click on the link sent to your email.\n')</script>";
+//   header("Location: ../index.php?err=To change your password click on the link sent to your email.\n");
   } catch (PDOException $e) {
         echo 'Error: '.$e->getMessage();
         exit;
