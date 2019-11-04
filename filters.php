@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if ($_SESSION[Username] && !empty($_SESSION[Username])) {
-        if (!$_GET[page]) {
+    if ($_SESSION['username']) {
+        if (!$_GET['page']) {
             header('Location: Gallery.php?page=1');
         }
     } else {

@@ -1,5 +1,6 @@
 <?php
 include_once 'header.php';
+include_once "footer.php";
     session_start();
     if ($_SESSION['Username'] && !empty($_SESSION['Username'])):
     ?>
@@ -16,7 +17,7 @@ include_once 'header.php';
         <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="2">
 
         <button type="submit" class="button" name="login" tabindex="4">Sign in</button>
-        <a href="forgot_password.php" id="mdp_forgot">Forgot your password</a>
+        <a href="forgot_password1.php" id="mdp_forgot">Forgot your password</a>
         <br/>
         <br/>
         <br/>
