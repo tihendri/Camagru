@@ -22,7 +22,7 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // sql to create table
     $sql = "CREATE TABLE IF NOT EXISTS Camagruers   (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(30) NOT NULL,
     lastname VARCHAR(30) NOT NULL,
     username VARCHAR(30) NOT NULL,
@@ -48,9 +48,10 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       // sql to create table
     $sql = "CREATE TABLE IF NOT EXISTS Pictures (
-      id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login_ VARCHAR(255) NOT NULL,
-      img VARCHAR(255) NOT NULL)";
+      img_id INT(100) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      usr_id INT(100) NOT NULL,
+      img_name LONGTEXT,
+      date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP)";
     $conn->exec($sql);
     echo "Table 'pictures' created successfully.<br>";
 }   catch(PDOException $e) {
