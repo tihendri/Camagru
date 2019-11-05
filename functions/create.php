@@ -35,7 +35,7 @@ $ver_key = hash('whirlpool', $username.$_POST['passwd']);
     Click on the following link to activate your account
     http://localhost:8080/camagru/verified.php?key=".$ver_key;
     $headers = "From:tihendri@student.wethinkcode.co.za"."\r\n";
-    echo "<script>window.alert('Email sent.')</script>";
+    echo "<script>window.alert('A verification email has been sent to your email address. Please click on the link to verify your account.')</script>";
     mail($to, $subject, $message, $headers);
   } catch (PDOException $e) {
       echo 'Error: '.$e->getMessage();
