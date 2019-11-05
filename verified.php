@@ -7,7 +7,7 @@
 <title>Camagru - Home</title>
   <article class="main">
     <?php    
-        // include "functions/verify.php";
+        // include "functions/verify_account.php";
         // verify();
         // include "../backend/connect_to_db.php";
         $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
@@ -22,7 +22,7 @@
                 // $_SESSION['email'] = $userdata['email'];
                 // $_SESSION['id'] = $userdata['id'];
                 // $_SESSION['username'] = $userdata['username'];
-                echo "<p>Your account has already been verified! Stop mucking about and login.</p>";
+                echo "<p>Your account has already been verified! Stop mucking about and sign in.</p>";
             }
     
             else if ($userdata) {
@@ -33,7 +33,7 @@
                 // $_SESSION['email'] = $userdata['email'];
                 // $_SESSION['id'] = $userdata['id'];
                 // $_SESSION['username'] = $userdata['username'];
-                echo "<p>Your account has successfully been verified. Have a very nice day and login.</p>";
+                echo "<p>Your account has successfully been verified. Have a very nice day and sign in.</p>";
             }
     
             else if (!$userdata) {
