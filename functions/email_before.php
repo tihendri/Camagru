@@ -21,7 +21,7 @@ function fp_email() {
     $message = "
     You have requested to change or renew your password. Your credential is as follows:
     ------------------------
-    Username: '$_POST[username]'
+    Username: '$data[username]'
     ------------------------
     (If this is not your username, please forgive this misunderstanding and delete this email, thanks.)
     Click on the following link to renew your password

@@ -8,26 +8,28 @@
 <title>Camagru | Change password</title>
   <article class="main">
 
-    <form class="login" action="forgot_password2.php" method="post">
+    <form class="login" action="" method="post">
+
+      <label><b>Email</b></label>
+      <input class="form" type="text" placeholder="Enter Email" name="email" required tabindex="1">
 
       <label><b>New Password</b></label>
-      <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="2">
+      <input class="form" type="password" placeholder="Enter Password" name="new_pass" required tabindex="2">
 
-      <label><b>Retype New Password</b></label>
-      <input class="form" type="password" placeholder="Enter Password" name="passwd2" required tabindex="3">
-      <?php if ($_GET['hash'] && $_GET['email']): ?>
-        <input type='hidden' name='email' value='<?=$_GET['email']?>'>
-        <input type='hidden' name='hash' value='<?=$_GET['hash']?>'>
-      <?php endif; ?>
-      <button type="submit" class="button" tabindex="4">Change your password</button>
+      <!-- <label><b>Retype New Password</b></label>
+      <input class="form" type="password" placeholder="Enter Password" name="new_pass" required tabindex="3"> -->
+
+      <button type="submit" name="change_pass" class="button" tabindex="4">Change your password</button>
     </form>
     <?php
-      if (isset($_POST['login']))
+      if (isset($_POST['change_pass']))
       {
-        include "functions/forgot_passwd.php";
-        log_in();
-        // include "functions/change_password.php";
-        // change_password();
+        include "functions/change_password.php";
+        $ver_key = $_GET['ver_key'];
+        $u_email = $_POST['email'];
+        $new_pass = hash('whirlpool', $_POST['new_pass']);
+        change_password($new_pass, $ver_key, $u_email);
+        echo"<h2>".$ver_key."</h2><br/>";
       }
     ?>
   </article>
