@@ -256,3 +256,67 @@ ul.pagination li a.active {
 ul.pagination li a:hover:not(.active) {
     background-color: rgba(180, 180, 180, 0.60);
 }
+
+
+
+
+
+
+.image {
+    display: block;
+    position: relative;
+}
+
+.box {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    color: #4a4a4a;
+    display: block;
+    padding: 1.25rem;
+}
+
+.tile {
+    align-items: stretch;
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: -webkit-min-content;
+    min-height: -moz-min-content;
+    min-height: min-content;
+  }
+  
+  .tile.is-ancestor {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+  }
+  
+  .tile.is-ancestor:last-child {
+    margin-bottom: -0.75rem;
+  }
+  
+  .tile.is-ancestor:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+  
+  .tile.is-child {
+    margin: 0 !important;
+  }
+  
+  .tile.is-parent {
+    padding: 0.75rem;
+  }
+  
+  .tile.is-vertical {
+    flex-direction: column;
+  }
+    
+@media screen and (min-width: 769px), print {
+
+    .tile.is-12 {
+      flex: none;
+      width: 100%;
+    }
+}

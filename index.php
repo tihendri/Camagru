@@ -6,11 +6,16 @@
 ?>
 <title>Camagru - Home</title>
   <article class="main">
-    <p>Welcome to Camagru!</p>
-  </article>
-  <aside class="aside">
-    
-  </aside>
+  <div>
+  <?php
+    if (!isset($_SESSION['id'])) {
+      echo '<h1>Welcome To Camagru</h1>';
+    }
+    else {
+      include "functions/img_display.php";
+      img_display();
+      }
+?>
 </div>
 <?php
     if (isset($_GET['session_status'])) {
@@ -19,3 +24,8 @@
         disconnect();
       }
     }
+?>
+  <!-- </article>
+  <aside class="aside">
+    
+  </aside> -->
