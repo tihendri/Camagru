@@ -26,7 +26,7 @@ function img_display() {
 						<article class='tile is-child box'>
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
-										<img src='data:image/png;base64,".$img_name."' />
+										<img style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p class='subtitle'>Likes: $likes_amnt Comments: $cmnts_amnt</p>
