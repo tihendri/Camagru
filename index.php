@@ -5,11 +5,11 @@
   include_once "footer.php";
 ?>
 <title>Camagru - Home</title>
-  <article class="main">
-  <div>
+  <!-- <article class="main"> -->
+  <div class="main" style="text-align:center">
   <?php
     if (!isset($_SESSION['id'])) {
-      echo '<h1>Welcome To Camagru</h1>';
+      echo '<h1 style="text-align:center">Welcome To Camagru</h1>';
     }
     else {
       include "functions/img_display.php";
