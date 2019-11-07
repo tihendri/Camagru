@@ -9,10 +9,10 @@
 
     <form class="login" action="create_account.php" method="post">
     <label><b>Firstname</b></label>
-      <input class="form" type="text" placeholder="Enter Username" name="firstname" required autofocus="autofocus" tabindex="1">
+      <input class="form" type="text" placeholder="Enter Firstname" name="firstname" required autofocus="autofocus" tabindex="1">
 
       <label><b>Lastname</b></label>
-      <input class="form" type="text" placeholder="Enter Username" name="lastname" required autofocus="autofocus" tabindex="2">
+      <input class="form" type="text" placeholder="Enter Lastname" name="lastname" required autofocus="autofocus" tabindex="2">
 
       <label><b>Username</b></label>
       <input class="form" type="text" placeholder="Enter Username" name="username" required autofocus="autofocus" tabindex="3">
