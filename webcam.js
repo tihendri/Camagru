@@ -47,5 +47,8 @@ overlay.forEach(function(element) {
         if (image.src === "http://localhost:8080/camagru/filter_images/jim_morrison.png") {
             contx.drawImage(image, 160, 205, 380, 275);
         }
+        if (image.src === "http://localhost:8080/camagru/filter_images/windows.png") {
+            contx.drawImage(image, 160, 205, 380, 275);
+        }
     });
 });

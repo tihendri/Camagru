@@ -24,6 +24,7 @@
 										<img src="http://localhost:8080/camagru/filter_images/water_splash.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/angel_wings.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/jim_morrison.png" class="supers" width="100" height="100">
+										<img src="http://localhost:8080/camagru/filter_images/windows.png" class="supers" width="100" height="100">
 									</div>
 									<div class="buttons is-centered">
 										<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
