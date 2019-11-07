@@ -8,6 +8,7 @@
 
 <ul class="profile_list">
             <li><a href="upload_image.php">Upload Image</a></li>
+            <label class="label">Username:  <?php echo $_SESSION['username'] ?></label>
             <li><a href="#.php">Change Username</a></li>
             <li><a href="#.php">Change Password</a></li>
             <li><a href="#.php">Change Email</a></li>
