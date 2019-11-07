@@ -36,7 +36,7 @@ $ver_key = hash('whirlpool', $username.$_POST['passwd']);
     http://localhost:8080/camagru/verified.php?key=".$ver_key;
     $headers = "From:tihendri@student.wethinkcode.co.za"."\r\n";
     echo "<script>window.alert('A verification email has been sent to your email address. Please click on the link to verify your account.')</script>";
-    mail($to, $subject, $message, $headers);
+    mail($to, $subject, $message, "");
   } catch (PDOException $e) {
       echo 'Error: '.$e->getMessage();
       exit;
