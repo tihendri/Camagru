@@ -19,17 +19,15 @@
 								<form action="" method="POST" enctype=multipart/form-data>
 									<input name="taken" id="taken" type="hidden" value="upload_taken.php">
 									<div class="box column has-text-centered is-10 is-offset-1">
-										<img src="http://localhost:8080/camagru/filter_images/fire_hand.png" class="supers" width="100" height="100">
+										<img src="http://localhost:8080/camagru/filter_images/beer.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/sexy_elf.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/water_splash.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/angel_wings.png" class="supers" width="100" height="100">
+										<img src="http://localhost:8080/camagru/filter_images/jim_morrison.png" class="supers" width="100" height="100">
 									</div>
 									<div class="buttons is-centered">
 										<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
 									</div>
-								<br/><br/><p class="title">Or Upload a picture</p>
-									<input name="upl_image" id="upl_image" type="file">
-									<input class="button" name="upload" type="submit" value="Upload Picture">
 								</form>
 							</article>
 						</div>

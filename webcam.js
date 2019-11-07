@@ -32,7 +32,7 @@ document.getElementById("submit_taken").addEventListener('click', function() {
 overlay.forEach(function(element) {
     element.addEventListener('click', function(){
         image = element;
-        if (image.src === "http://localhost:8080/camagru/filter_images/fire_hand.png") {
+        if (image.src === "http://localhost:8080/camagru/filter_images/beer.png") {
             contx.drawImage(image, 140, 0, 480, 480);
         }
         if (image.src === "http://localhost:8080/camagru/filter_images/sexy_elf.png") {
@@ -42,6 +42,9 @@ overlay.forEach(function(element) {
             contx.drawImage(image, 140, 45, 380, 380);
         }
         if (image.src === "http://localhost:8080/camagru/filter_images/angel_wings.png") {
+            contx.drawImage(image, 160, 205, 380, 275);
+        }
+        if (image.src === "http://localhost:8080/camagru/filter_images/jim_morrison.png") {
             contx.drawImage(image, 160, 205, 380, 275);
         }
     });
