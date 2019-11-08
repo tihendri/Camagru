@@ -3,7 +3,7 @@
 //   session_start();
   include_once '../config/database.php';
   try {
-      $dbh = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);
+      $dbh = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
       $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       $sth = $dbh->prepare("DELETE FROM pictures WHERE usr_id = :u_id AND img_id = :img");
       $sth->bindParam(':login', $_SESSION['id'], PDO::PARAM_STR);

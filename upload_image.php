@@ -4,7 +4,11 @@
   include_once "footer.php";
   include "functions/upload_taken.php";
 ?>
-
+<html>
+	<head>
+		<title>Camagru | Upload Image</title>
+	</head>
+	<body>
 <div class="tile is-ancestor">
 					<div class="tile is-8">
 						<div class="tile is-parent">
@@ -56,3 +60,24 @@ if (isset($_POST['upload'])) {
   }
 }
 ?>
+		<h2>Images You've Uploaded</h2>
+		<div class="tile is-10">
+			<div class="tile is-parent">
+				<article class="tile is-child box">
+					<?php
+						if (isset($_GET['session_status'])){
+							include_once 'update_account.php';
+						}
+						else {
+							uploaded_images($_SESSION['usr_id']);
+						}
+						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
+							update_user($u_data['usr_id']);
+						}
+					?>
+				</article>
+			</div>
+		</div>
+		<a id="open-modal" href="my_account.php?session_status=update">Edit Account</a>
+	</body>
+</html>
