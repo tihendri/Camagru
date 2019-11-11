@@ -65,12 +65,13 @@ if (isset($_POST['upload'])) {
 			<div class="tile is-parent">
 				<article class="tile is-child box">
 					<?php
-						if (isset($_GET['session_status'])){
-							include_once 'update_account.php';
-						}
-						else {
-							uploaded_images($_SESSION['usr_id']);
-						}
+						// if (isset($_GET['session_status'])){
+						// 	include_once 'update_account.php';
+						// }
+						// else {
+							include "functions/uploaded_images.php";
+							uploaded_images($_SESSION['id']);
+						// }
 						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
 							update_user($u_data['usr_id']);
 						}
