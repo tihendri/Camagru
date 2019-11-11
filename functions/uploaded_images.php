@@ -15,7 +15,7 @@ function uploaded_images($user) {
 			$img_name = $img['img_name'];
 			$img_id = $img['img_id'];
 			echo "	<figure class='image'>
-						<a href='../image_page.php?img=$img_id'>
+						<a href='image_page.php?img=$img_id'>
 							<img src='data:image/png;base64,".$img_name."' />
 						</a>
 					</figure>";
