@@ -212,7 +212,7 @@ ul.navbar li a:hover:not(.active) {
 .comments {
     background-color: #ddd;
     border: 2px solid rgb(255, 138, 1);
-    width: 426px;
+    width: 100%;
 }
 
 #mdp_forgot {
@@ -267,9 +267,9 @@ ul.pagination li a:hover:not(.active) {
 }
 
 .box {
-    background-color: transparent;
+    /* background-color: transparent; */
     border-radius: 6px;
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+    /* box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02); */
     color: #4a4a4a;
     display: block;
     padding: 1.25rem;
@@ -281,8 +281,6 @@ ul.pagination li a:hover:not(.active) {
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    min-height: -webkit-min-content;
-    min-height: -moz-min-content;
     min-height: min-content;
   }
   
@@ -318,4 +316,8 @@ ul.pagination li a:hover:not(.active) {
       flex: none;
       width: 100%;
     }
+}
+
+.media {
+    border: 3px solid wheat;
 }
