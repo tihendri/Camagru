@@ -67,10 +67,10 @@ try {
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // sql to create table
     $sql = "CREATE TABLE IF NOT EXISTS Comments (
-      id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login_ VARCHAR(255) NOT NULL,
-      img_id VARCHAR(255) NOT NULL,
-      comment VARCHAR (255) NOT NULL)";
+		`cmnt_id` INT(100) AUTO_INCREMENT PRIMARY KEY,
+		`cmnt_img_id` INT(100) NOT NULL REFERENCES images(img_id),
+		`cmnt_usr_id` INT(100) NOT NULL REFERENCES users(user_id),
+		`comment` TEXT(255) NOT NULL)";
     $conn->exec($sql);
     echo "Table 'comments' created successfully.<br>";
 }   catch(PDOException $e) {
