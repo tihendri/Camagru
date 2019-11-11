@@ -1,12 +1,13 @@
 <?php
   session_start();
-//   if ($_SESSION['username']) {
-//       if (!$_GET['page']) {
-//           header('Location: Gallery.php?page=1');
-//       }
-//   } else {
-//       header('Location: index.php?err=You must login to access this page.');
-//   }
+  if ($_SESSION['username']) {
+      if (!$_GET['page']) {
+          header('Location: Gallery.php?page=1');
+      }
+  } else {
+    //   header('Location: index.php?err=You must login to access this page.');
+            echo"<script>window.alert('You must login to access this page!')</script>";
+  }
     include_once 'config/database.php';
     $start_ = (($_GET['page'] - 1) * 10);
     try {
