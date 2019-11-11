@@ -23,4 +23,11 @@
             exit();
         }
     }
+
+    function validate_comment($comment) {
+        if (preg_match("/^.*<script.*$/", $comment)) {
+            return false;
+        }
+        return true;
+    }
 ?>
