@@ -85,10 +85,10 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // sql to create table
-    $sql = "CREATE TABLE Likes  (
-      id INT(9) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-      login_ VARCHAR(255) NOT NULL,
-      img_id VARCHAR(255) NOT NULL)";
+    $sql = "CREATE TABLE IF NOT EXISTS likes(
+		`like_id` INT(100) AUTO_INCREMENT PRIMARY KEY,
+		`like_img_id` INT(100) NOT NULL REFERENCES pictures(img_id),
+		`like_usr_id` INT(100) NOT NULL REFERENCES camagruers(user_id))";
     $conn->exec($sql);
     echo "Table 'likes' created successfully.<br>";
     $conn = NULL;

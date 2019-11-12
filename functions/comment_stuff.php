@@ -1,12 +1,6 @@
 <?php
 function get_comment_count($img_id) {
-	try {
-		$conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
-		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	}
-	catch(PDOException $e) {
-		echo "ERROR: ".$e->getMessage();
-	}
+	include 'connect_to_db.php';
 	$get_cmnts_sql = "SELECT * FROM comments WHERE cmnt_img_id=?";
 	$get_cmnts = $conn->prepare($get_cmnts_sql);
 	$get_cmnts->execute([$img_id]);

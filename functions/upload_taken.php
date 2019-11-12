@@ -6,8 +6,7 @@
 if (isset($_POST['submit_taken'])) {
     if (isset($_POST['taken'])) {
         try {
-            $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include 'connect_to_db.php';
             $image = $_POST['taken'];
             $pre = "data:image/png;base64,";
             if (substr($image, 0, strlen($pre)) == $pre) {

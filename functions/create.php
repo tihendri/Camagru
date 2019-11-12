@@ -14,17 +14,13 @@ validate_email($email);
 validate_password($_POST['passwd']);
 $ver_key = hash('whirlpool', $username.$_POST['passwd']);
   try {
-    //  include '../backend/connect_to_db.php';
-      $passwd = hash(SHA256, $_POST['passwd']);
-    //   $hash = md5(rand(0, 1000));
-    $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = ("INSERT INTO camagruers (`firstname`, `lastname`, `email`, `username`, `password_`, `verkey`) values(:firstname, :lastname, :email, :username, :password_, :verkey)");
-        $data = $conn->prepare($sql);
-        $data->execute(array(':firstname'=>$firstname, ':lastname'=>$lastname, ':email'=>$email, ':username'=>$username, ':password_'=>$passwd, ':verkey'=>$ver_key));
-
-
+    include 'connect_to_db.php';
+    $passwd = hash(SHA256, $_POST['passwd']);
+    // $hash = md5(rand(0, 1000));
+    $sql = ("INSERT INTO camagruers (`firstname`, `lastname`, `email`, `username`, `password_`, `verkey`) values(:firstname, :lastname, :email, :username, :password_, :verkey)");
+    $data = $conn->prepare($sql);
+    $data->execute(array(':firstname'=>$firstname, ':lastname'=>$lastname, ':email'=>$email, ':username'=>$username, ':password_'=>$passwd, ':verkey'=>$ver_key));
+    
     $to = $_POST['email'];
     $subject = "Camagru | Registration";
     $message = "

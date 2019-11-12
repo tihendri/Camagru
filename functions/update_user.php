@@ -1,9 +1,9 @@
 <?php
 
-include "../backend/connect_to_db.php";
+// include 'connect_to_db.php';
 
 function update_notify($user_id) {
-	// include '../includes/connect.php';
+	include 'connect_to_db.php';
 	if (isset($_POST['notif'])) {
 		$updt_sql = "UPDATE camagruers SET notify=1 WHERE user_id=:id";
 		$updt_notif = $con->prepare($updt_sql);
@@ -17,7 +17,7 @@ function update_notify($user_id) {
 	}
 }
 function update_name($user_id, $new_name) {
-	// include '../includes/connect.php';
+	include 'connect_to_db.php';
 	if (isset($_POST['updt_name'])) {
 		$updt_sql = "UPDATE camagruers SET username=:username WHERE user_id=:id";
 		$updt_name = $con->prepare($updt_sql);
@@ -26,7 +26,7 @@ function update_name($user_id, $new_name) {
 	}
 }
 function update_email($user_id, $new_email) {
-	// include '../includes/connect.php';
+	include 'connect_to_db.php';
 	if (isset($_POST['updt_email'])) {
 		$_SESSION['email'] = $new_email;
 		$new_verif = hash('whirlpool', time().$new_email);
@@ -37,7 +37,7 @@ function update_email($user_id, $new_email) {
 	}
 }
 function update_passwd($user_id, $new_passwd) {
-	// include '../includes/connect.php';
+	include 'connect_to_db.php';
 	if (isset($_POST['updt_passwd'])) {
 		$updt_sql = "UPDATE camagruers SET user_passwd=:u_passwd WHERE user_id=:id";
 		$updt_passwd = $con->prepare($updt_sql);
@@ -45,7 +45,7 @@ function update_passwd($user_id, $new_passwd) {
 	}
 }
 function update_image($user_id, $new_image) {
-	// include '../includes/connect.php';
+	include 'connect_to_db.php';
 	if (isset($_POST['updt_image'])) {
 		$updt_sql = "UPDATE camagruers SET user_image=:u_image WHERE user_id=:id";
 		$updt_image = $con->prepare($updt_sql);

@@ -1,25 +1,21 @@
 <?php
 function img_display() {
     try {
-    // include 'includes/connect.php';
-	// include_once 'functions/comment_functions.php';
-	// include_once 'functions/like_functions.php';
-    $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $get_imgs = "SELECT * FROM pictures ORDER BY date_created DESC";
-	$exe_imgs = $conn->prepare($get_imgs);
-    $exe_imgs->execute();
-    }
-    catch(PDOException $e)
-    {
-    echo "Connection failed: " . $e->getMessage();
+		include 'connect_to_db.php';
+		include_once 'comment_stuff.php';
+		include_once 'functions/like_stuff.php';
+		$get_imgs = "SELECT * FROM pictures ORDER BY date_created DESC";
+		$exe_imgs = $conn->prepare($get_imgs);
+		$exe_imgs->execute();
+	}
+	catch(PDOException $e) {
+    	echo "Connection failed: " . $e->getMessage();
     }
 	while ($image = $exe_imgs->fetch()) {
 		$img_name = $image['img_name'];
 		$img_id = $image['img_id'];
-		$cmnts_amnt = 21; //get_comment_count($img_id);
-		$likes_amnt = 55; //get_like_count($img_id);
+		$cmnts_amnt = get_comment_count($img_id);
+		$likes_amnt = get_like_count($img_id);
 		echo "	<div class='tile is-ancestor'>
 					<div class='tile is-12 is-vertical'>
 						<div class='tile is-parent'>

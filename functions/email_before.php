@@ -5,10 +5,7 @@ function fp_email() {
   
   // include "validation.php";  
   try {
-    // include "../backend/connect_to_db.php";
-    $conn = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    include "connect_to_db.php";
     $email_to = $_POST['email'];
     // validate_email($email_to);
     $get_data = $conn->prepare("SELECT * FROM camagruers WHERE email=?");

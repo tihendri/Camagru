@@ -2,7 +2,7 @@
 function verify() {    
     // include "functions/verify.php";
     // verify();
-     include "connect_to_db.php";
+    include "connect_to_db.php";
 
     if (isset($_GET['key'])) {
         $get_user_data = $conn->prepare("SELECT * FROM camagruers WHERE verkey = ?");
