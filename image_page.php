@@ -12,7 +12,7 @@
 <?php
       include "functions/like_stuff.php";
       if (isset($_POST['like'])) {
-        echo"<script>window.alert('zim zala.')</script>";/////////////test where error is
+        echo"<script>window.alert('zim zala bim.')</script>";/////////////test where error is
         post_like($_GET['img']);
       }
       if (isset($_POST['apathy'])) {
@@ -22,10 +22,10 @@
         include "functions/comment_stuff.php";
         post_comment($_GET['img']);
       }
-      if (isset($_POST['delete_post'])) {
-        include "functions/delete_post.php";
-        delete_post($_GET['img']);
-      }
+      // if (isset($_POST['delete_post'])) {
+      //   include "functions/delete_post.php";
+      //   delete_post($_GET['img']);
+      // }
       include "functions/get_image.php";
       $img_id = $_GET['img'];
       get_image($img_id);
@@ -35,7 +35,7 @@
 <div class="comments">
 							<form method="POST">
 								<?php
-                include "functions/is_my_post.php";
+                include "functions/is_my_post.php";//////////here is a problem
 								echo "<div class='level'>";
 									if (!post_is_liked($_GET['img'])) {
 										echo "<div class='level-left'><input class='button is-light' type='submit' name='like' value='Like'></div><br/>";
