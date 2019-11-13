@@ -10,22 +10,11 @@
 
 
 <?php
-      include "functions/like_stuff.php";
-      if (isset($_POST['like'])) {
-        echo"<script>window.alert('zim zala bim.')</script>";/////////////test where error is
-        post_like($_GET['img']);
+     
+      if (isset($_POST['delete_post'])) {
+        include "functions/delete_post.php";
+        delete_post($_GET['img']);
       }
-      if (isset($_POST['apathy'])) {
-        delete_like($_GET['img']);
-      }
-      if (isset($_POST['comment'])) {
-        include "functions/comment_stuff.php";
-        post_comment($_GET['img']);
-      }
-      // if (isset($_POST['delete_post'])) {
-      //   include "functions/delete_post.php";
-      //   delete_post($_GET['img']);
-      // }
       include "functions/get_image.php";
       $img_id = $_GET['img'];
       get_image($img_id);
@@ -53,6 +42,20 @@
 								</div>
 							</form>
 </div>
+<?php
+include "functions/like_stuff.php";
+if (isset($_POST['like'])) {
+  echo"<script>window.alert('zim zala bim.')</script>";/////////////test where error is
+  post_like($_GET['img']);
+}
+if (isset($_POST['apathy'])) {
+  delete_like($_GET['img']);
+}
+if (isset($_POST['comment'])) {
+  include "functions/comment_stuff.php";
+  post_comment($_GET['img']);
+}
+?>
 <header>Comments</header>
 <?php
       get_comments($img_id);
