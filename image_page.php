@@ -10,14 +10,6 @@
 
 
 <?php
-      // include "functions/like_stuff.php";
-      // if (isset($_POST['like'])) {
-      //   echo"<script>window.alert('zim zala bim.')</script>";/////////////test where error is
-      //   post_like($_GET['img']);
-      // }
-      // if (isset($_POST['apathy'])) {
-      //   delete_like($_GET['img']);
-      // }
       if (isset($_POST['comment'])) {
         include "functions/comment_stuff.php";
         post_comment($_GET['img']);
@@ -35,7 +27,7 @@
 <div class="comments">
 							<form method="POST">
 								<?php
-                include "functions/is_my_post.php";//////////here is a problem
+                include "functions/is_my_post.php";
 								echo "<div class='level'>";
 									if (!post_is_liked($_GET['img'])) {
 										echo "<div class='level-left'><input class='button is-light' type='submit' name='like' value='Like'></div><br/>";
@@ -56,6 +48,14 @@
 <header>Comments</header>
 <?php
       get_comments($img_id);
+      include "functions/like_stuff.php";
+      echo"<script>window.alert('You are now logged in!')</script>";
+      if (isset($_POST['like'])) {
+        post_like($_GET['img']);
+      }
+      if (isset($_POST['apathy'])) {
+        delete_like($_GET['img']);
+      }
 ?>
 
 

@@ -30,8 +30,10 @@ try {
     email VARCHAR(50),
     verkey VARCHAR(255) DEFAULT (0) NOT NULL,
     reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    verified BIT default (0) NOT NULL
+    verified BIT default (0) NOT NULL,
+    notify BIT default 1 NOT NULL
     )";
+    
     // use exec() because no results are returned
     $conn->exec($sql);
     echo "Table 'camagruers' created successfully<br>";

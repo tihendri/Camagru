@@ -1,6 +1,7 @@
 <?php
 
 include "header.php";
+include "footer.php";
 ?>
 
 
@@ -8,7 +9,7 @@ include "header.php";
 
 
 <form method="POST" enctype="multipart/form-data">
-	<label class="label">Name:  <?php echo $_SESSION['user_name'] ?></label>
+	<label class="label">Username:  <?php echo $_SESSION['username'] ?></label>
 	<div class="field has-addons">
 		<p class="control has-icons-left">
 			<input class="input is-medium" type="text" name="new_name" placeholder="Choose a username" required/>
@@ -21,8 +22,14 @@ include "header.php";
 		</div>
 	</div>
 </form>
+<?php
+if (isset($_POST['new_name'])) {
+	include "functions/update_user.php";
+	updt_name($_SESSION['id'], $_POST['new_name']);
+}
+?>
 <form method="POST" enctype="multipart/form-data">
-	<label class="label">Email:  <?php echo $_SESSION['user_email'] ?></label>
+	<label class="label">Email:  <?php echo $_SESSION['email'] ?></label>
 	<div class="field has-addons">
 		<p class="control has-icons-left">
 			<input class="input is-medium" type="email" name="new_email" placeholder="Enter an email address" required/>
@@ -36,10 +43,10 @@ include "header.php";
 	</div>
 </form>
 <form method="POST" enctype="multipart/form-data">
-	<label class="label">Password: </label>
+	<label class="label">Password... </label>
 	<div class="field has-addons">
 		<p class="control has-icons-left">
-			<input class="input is-medium" type="password" name="new_passwd" placeholder="Password" required/>
+			<input class="input is-medium" type="password" name="new_passwd" placeholder="Enter New Password" required/>
 			<span class="icon is-small is-left">
 				<i class="fas fa-lock"></i>
 			</span>
@@ -49,7 +56,7 @@ include "header.php";
 		</div>
 	</div>
 </form>
-<form method="POST" enctype="multipart/form-data">
+<!-- <form method="POST" enctype="multipart/form-data">
 	<label class="label">Profile Picture: </label>
 	<div class="field has-addons">
 		<div class="file has-name">
@@ -61,7 +68,7 @@ include "header.php";
 			<input class="button is-success is-medium" type="submit" name="updt_image" value="Update">
 		</div>
 	</div>
-</form>
+</form> -->
 <br/>
 <form method="POST">
 	<div class="level">
