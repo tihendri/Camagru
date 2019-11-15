@@ -20,13 +20,13 @@ function post_like($img) {
 	include 'connect_to_db.php';
 	if (isset($_SESSION['id'])) {
 		$like_usr_id = $_SESSION['id'];
-		if (!post_is_liked($img)) {
+		// if (!post_is_liked($img)) {
 			$post_like_sql = "INSERT INTO likes(like_img_id, like_usr_id) VALUES(:img_id, :id)";
 			$post_like = $conn->prepare($post_like_sql);
 			$post_like->execute(array(':img_id'=>$img, ':id'=>$like_usr_id));
-		}
-	} else {
-		echo "<script>alert('Please Log In or Register to like or comment!')</script>";
+		// }
+	// } else {
+	// 	echo "<script>alert('Please Log In or Register to like or comment!')</script>";
 	}
 	$conn = null;
 }
