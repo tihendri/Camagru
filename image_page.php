@@ -45,7 +45,7 @@
 								</div>
 							</form>
 </div>
-<header>Comments</header>
+<header>Comments</header><br />
 <?php
       get_comments($img_id);
       include "functions/like_stuff.php";
