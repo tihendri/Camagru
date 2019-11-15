@@ -66,7 +66,7 @@ function post_comment($img) {
 				$post_cmnt = $conn->prepare($post_cmnt_sql);
 				$post_cmnt->execute(array(':img_id'=>$img, ':cmntr_id'=>$commentor_id, ':comment'=>$comment));
 				$op = get_post_user($img);
-				comment_notification($op);
+				comment_notification($op, $comment, $_SESSION['username']);
 				echo "<script>alert('Your comment has been submitted!')</script>";
 				echo"<script>window.location.replace('image_page.php?img=".$img."')</script>";
 			} else {
