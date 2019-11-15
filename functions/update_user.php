@@ -34,7 +34,7 @@ function update_email($user_id, $new_email) {
 		$updt_sql = "UPDATE camagruers SET email=:u_email, verified=0, verkey=:new_verif WHERE id=:id";
 		$updt_email = $conn->prepare($updt_sql);
 		$updt_email->execute(array(':u_email'=>$new_email, ':new_verif'=>$new_verif,':u_id'=>$user_id));
-		verif_email($new_email, $new_verif);
+		verif_email($new_email, $new_verif);//////////////////////verify email needs to be checked ASAP!!!!!!!!!
 	}
 }
 function update_passwd($user_id, $new_passwd) {

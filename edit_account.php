@@ -22,12 +22,6 @@ include "footer.php";
 		</div>
 	</div>
 </form>
-<?php
-if (isset($_POST['updt_name'])) {
-	include "functions/update_user.php";
-	updt_name($_SESSION['id'], $_POST['new_name']);
-}
-?>
 <form method="POST" enctype="multipart/form-data">
 	<label class="label">Email:  <?php echo $_SESSION['email'] ?></label>
 	<div class="field has-addons">

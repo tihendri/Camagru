@@ -15,8 +15,9 @@
 <section>
   <div>
   <?php
-    if (isset($_POST['updt_name']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif'])) {
+    if (isset($_POST['updt_name']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif']) || isset($_POST['new_email'])) {
       include "functions/update_user";
+      update_user($_SESSION['id']);
     }
   ?>
 
