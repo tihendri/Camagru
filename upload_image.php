@@ -69,9 +69,11 @@ if (isset($_POST['upload'])) {
 						// 	include_once 'update_account.php';
 						// }
 						// else {
-							include "functions/uploaded_images.php";
-							uploaded_images($_SESSION['id']);
+							// include "functions/uploaded_images.php";
+							// uploaded_images($_SESSION['id']);
 						// }
+						include "functions/img_display.php";
+						img_display_user_limit();
 						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
 							update_user($u_data['usr_id']);
 						}

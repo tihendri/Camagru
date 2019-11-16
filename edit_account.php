@@ -1,13 +1,9 @@
 <?php
 
-include "header.php";
-include "footer.php";
+// include "header.php";
+// include "footer.php";
+// include "functions/update_user.php";
 ?>
-
-
-
-
-
 <form method="POST" enctype="multipart/form-data">
 	<label class="label">Username:  <?php echo $_SESSION['username'] ?></label>
 	<div class="field has-addons">
@@ -81,3 +77,8 @@ include "footer.php";
 		</div>
 	</div>
 </form>
+
+<?php
+	// include_once "functions/update_user.php";
+	// update_user($_SESSION['id']);
+?>

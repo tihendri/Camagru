@@ -15,9 +15,13 @@
 <section>
   <div>
   <?php
-    if (isset($_POST['updt_name']) || isset($_POST['updt_passwd']) || isset($_POST['updt_notif']) || isset($_POST['new_email'])) {
-      include "functions/update_user";
+    if (isset($_SESSION['id'])) {
+      include_once "edit_account.php";
+    }
+    if (isset($_POST['username'])) {
+      include "functions/update_user.php";
       update_user($_SESSION['id']);
+      echo"<script>window.alert('bleh blah blah blaaah.')</script>";
     }
   ?>
 
@@ -28,7 +32,7 @@
 <div class="main" style="text-align:center">
 <?php
 include "functions/img_display.php";
-      img_display();
+      img_display_user();
 ?>
 <?php
     if (isset($_GET['session_status'])) {
