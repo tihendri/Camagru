@@ -6,7 +6,7 @@
 <div class="main" style="text-align:center">
 <?php
     include "functions/img_display.php";
-    img_display();
+    img_display_user();
 ?>
 </div>
 <?php
