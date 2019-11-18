@@ -24,7 +24,7 @@ function comment_notification($user, $cmnt, $commenter) {
     }
     else {
         echo"<script>window.alert('You must be logged in to comment on pictures. If you do not have an account, please signup to join Camagru.')</script>";
-        echo"<script>window.location.replace('../login_now.php')</script>";
+        echo"<script>window.location.replace('login_now.php')</script>";
     }
 }
 ?>
