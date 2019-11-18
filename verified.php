@@ -33,7 +33,7 @@
                 // $_SESSION['email'] = $userdata['email'];
                 // $_SESSION['id'] = $userdata['id'];
                 // $_SESSION['username'] = $userdata['username'];
-                echo "<p>Your account has successfully been verified. Have a very nice day and sign in.</p>";
+                echo "<p>Your account has successfully been verified. Have a very nice day.</p>";
             }
     
             else if (!$userdata) {

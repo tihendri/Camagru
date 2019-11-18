@@ -14,7 +14,7 @@
         <a href="index.php" id="title"><h1>Camagru</h1></a>
         <ul class="navbar">
             <li><a href="index.php">Home</a></li>
-            <li><a href="filters.php">Filters</a></li>
+            <!-- <li><a href="filters.php">Filters</a></li>    add something extra maybe... -->
             <li><a href="gallery.php">Gallery</a></li>
             <?php
                 if (!isset($_SESSION['id'])) {

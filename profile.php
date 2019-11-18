@@ -18,11 +18,27 @@
     if (isset($_SESSION['id'])) {
       include_once "edit_account.php";
     }
-    if (isset($_POST['username'])) {
+    if (isset($_POST['updt_name'])) {
+      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
       include "functions/update_user.php";
       update_user($_SESSION['id']);
-      echo"<script>window.alert('bleh blah blah blaaah.')</script>";
     }
+    else if (isset($_POST['updt_email'])) {
+      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
+      include "functions/update_user.php";
+      update_user($_SESSION['id']);
+    }
+    else if (isset($_POST['updt_passwd'])) {
+      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
+      include "functions/update_user.php";
+      update_user($_SESSION['id']);
+    }
+    else if (isset($_POST['updt_notif'])) {
+      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
+      include "functions/update_user.php";
+      update_user($_SESSION['id']);
+    }
+    
   ?>
 
 </div>
