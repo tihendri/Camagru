@@ -2,10 +2,12 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Camagru is an Instagram-like web application.">
+    <meta name="theme-color" content="#317EFB"/>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 

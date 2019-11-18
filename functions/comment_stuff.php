@@ -72,10 +72,11 @@ function post_comment($img) {
 				echo "<script>alert('Your comment has been submitted!')</script>";
 				echo"<script>window.location.replace('image_page.php?img=".$img."')</script>";
 			}
-			else {
-				echo "<script>alert('Please Log In or Register to like or comment!')</script>";
-			}
 		}
+	}
+	else {
+		echo "<script>alert('Please Log In or Register to like or comment!')</script>";
+		echo"<script>window.location.replace('image_page.php?img=".$img."')</script>";
 	}
 }
 ?>

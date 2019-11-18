@@ -5,8 +5,14 @@
 
 <div class="main" style="text-align:center">
 <?php
-    include "functions/img_display.php";
-    img_display_user();
+    if (isset($_SESSION['id'])) {
+      include "functions/img_display.php";
+      img_display_user();
+    }
+    else {
+      echo "<script>alert('Please Log In or Register to access your gallery!')</script>";
+      echo"<script>window.location.replace('index.php')</script>";
+    }
 ?>
 </div>
 <?php

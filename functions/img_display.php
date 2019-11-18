@@ -22,7 +22,7 @@ function img_display() {
 						<article class='tile is-child box'>
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
-										<img style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
+										<img alt='asdasdasd' style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p class='subtitle'>Likes: $likes_amnt Comments: $cmnts_amnt</p>
@@ -57,7 +57,7 @@ function img_display_user() {
 						<article class='tile is-child box'>
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
-										<img style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
+										<img alt='dasasd' style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p class='subtitle'>Likes: $likes_amnt Comments: $cmnts_amnt</p>
@@ -92,7 +92,7 @@ function img_display_user_limit() {
 						<article class='tile is-child box'>
 							<figure class='image'>
 									<a href='image_page.php?img=$img_id'>
-										<img style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
+										<img alt='asdasdas' style='height:30%; width:60%' src='data:image/png;base64,".$img_name."' />
 									</a>
 							</figure>
 							<p class='subtitle'>Likes: $likes_amnt Comments: $cmnts_amnt</p>

@@ -65,13 +65,6 @@ if (isset($_POST['upload'])) {
 			<div class="tile is-parent">
 				<article class="tile is-child box">
 					<?php
-						// if (isset($_GET['session_status'])){
-						// 	include_once 'update_account.php';
-						// }
-						// else {
-							// include "functions/uploaded_images.php";
-							// uploaded_images($_SESSION['id']);
-						// }
 						include "functions/img_display.php";
 						img_display_user_limit();
 						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
@@ -81,6 +74,5 @@ if (isset($_POST['upload'])) {
 				</article>
 			</div>
 		</div>
-		<a id="open-modal" href="my_account.php?session_status=update">Edit Account</a>
 	</body>
 </html>
