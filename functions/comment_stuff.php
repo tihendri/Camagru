@@ -37,7 +37,7 @@ function get_comments($img_id) {
 					<div class='tile is-8 is-vertical'>
 						<div class='tile is-parent'>
 						<article class='media'>
-							<div class='media-content'>
+							<div class='span'>
 								<div class='content'>
 									<p>
 										<strong><b><i>$commentor</i></b></strong><br/>

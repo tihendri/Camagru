@@ -16,13 +16,13 @@
 								<p class="title">Take a picture</p>
 									<video autoplay id='vid' width='720' height='480' style=''></video>
 									<br/>
-									<div class="buttons is-centered">
+									<div class="buttons">
 										<button class="button" id="shoot" >Take Picture</button>
 									</div>
 									<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
 								<form action="" method="POST" enctype=multipart/form-data>
 									<input name="taken" id="taken" type="hidden" value="upload_taken.php">
-									<div class="box column has-text-centered is-10 is-offset-1">
+									<div class="box">
 										<img src="http://localhost:8080/camagru/filter_images/beer.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/sexy_elf.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/water_splash.png" class="supers" width="100" height="100">
@@ -30,7 +30,7 @@
 										<img src="http://localhost:8080/camagru/filter_images/jim_morrison.png" class="supers" width="100" height="100">
 										<img src="http://localhost:8080/camagru/filter_images/windows.png" class="supers" width="100" height="100">
 									</div>
-									<div class="buttons is-centered">
+									<div class="buttons">
 										<button class="button" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
 									</div>
 								</form>
@@ -53,23 +53,18 @@ if (isset($_POST['upload'])) {
   }
 }
 ?>
-		<h2>Images You've Uploaded</h2>
-		<div class="main" style="text-align:center">
-			<?php
-			include "functions/img_display.php";
-				img_display_user_limit();
-			?>
-		</div>
-		<!-- <div class="tile is-10">
-			<div class="tile is-parent">
-				<article class="tile is-child box"> -->
-					<?php
-						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
-							update_user($u_data['usr_id']);
-						}
-					?>
-				<!-- </article>
-			</div> -->
+<h2>Images You've Uploaded</h2>
+	<div class="main" style="text-align:center">
+		<?php
+		include "functions/img_display.php";
+			img_display_user_limit();
+		?>
+	</div>
+	<?php
+		if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
+			update_user($u_data['usr_id']);
+		}
+	?>
 		</div>
 	</body>
 </html>

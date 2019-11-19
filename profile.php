@@ -8,9 +8,9 @@
 
 <ul class="profile_list">
             <li><a href="upload_image.php">Upload Image</a></li><br /><br />
-            <li><a href="edit_account.php">Edit Account</a></li><br /><br />
-            <li>Username:  <?php echo $_SESSION['username'] ?></li><br /><br />
-            <li>Email address:  <?php echo $_SESSION['email'] ?></li><br /><br />
+            <!-- <li><a href="edit_account.php">Edit Account</a></li><br /><br /> -->
+            <!-- <li>Username:  <?php // echo $_SESSION['username'] ?></li><br /><br />
+            <li>Email address:  <?php // echo $_SESSION['email'] ?></li><br /><br /> -->
 </ul>
 <section>
   <div>

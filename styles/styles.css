@@ -4,7 +4,7 @@ html, body {
 }
 
 html {
-    background: url(../giftly.png);
+    background: url(../upfeathers.png);
 }
 
 .wrapper {
@@ -39,7 +39,7 @@ html {
     text-align: center;
 } */
 
-.aside {
+/* .aside {
     max-width: 25%;
 }
 
@@ -53,7 +53,7 @@ html {
         flex: 1 auto;
         max-width: none;
     }
-}
+} */
 
 .empty {
   font-size: 30px;
@@ -70,12 +70,12 @@ html {
     .main {
         order: 1;
     }
-    .aside {
+    /* .aside {
         order: 2;
     }
     .aside2 {
         order: 2;
-    }
+    } */
     .footer {
         order: 3;
     }
@@ -139,7 +139,7 @@ html {
     box-sizing: border-box;
 }
 
-.strike {
+/* .strike {
     display: block;
     text-align: center;
     overflow: hidden;
@@ -168,7 +168,7 @@ html {
 .strike>span:after {
     left: 100%;
     margin-left: 15px;
-}
+} */
 
 ul.navbar {
     list-style-type: none;
@@ -282,33 +282,33 @@ ul.pagination li a:hover:not(.active) {
     flex-grow: 1;
     flex-shrink: 1;
     min-height: min-content;
-  }
+}
   
-  .tile.is-ancestor {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
-  }
-  
-  .tile.is-ancestor:last-child {
-    margin-bottom: -0.75rem;
-  }
-  
-  .tile.is-ancestor:not(:last-child) {
-    margin-bottom: 0.75rem;
-  }
-  
-  .tile.is-child {
-    margin: 0 !important;
-  }
-  
-  .tile.is-parent {
-    padding: 0.75rem;
-  }
-  
-  .tile.is-vertical {
-    flex-direction: column;
-  }
+.tile.is-ancestor {
+margin-left: -0.75rem;
+margin-right: -0.75rem;
+margin-top: -0.75rem;
+}
+
+.tile.is-ancestor:last-child {
+margin-bottom: -0.75rem;
+}
+
+.tile.is-ancestor:not(:last-child) {
+margin-bottom: 0.75rem;
+}
+
+.tile.is-child {
+margin: 0 !important;
+}
+
+.tile.is-parent {
+padding: 0.75rem;
+}
+
+.tile.is-vertical {
+flex-direction: column;
+}
     
 @media screen and (min-width: 769px), print {
 
