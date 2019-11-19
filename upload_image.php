@@ -17,7 +17,7 @@
 									<video autoplay id='vid' width='720' height='480' style=''></video>
 									<br/>
 									<div class="buttons is-centered">
-										<button class="button is-centered" id="shoot" >Take Picture</button>
+										<button class="button" id="shoot" >Take Picture</button>
 									</div>
 									<canvas id='uploadCanvas' width='720' height='480' style=""></canvas>
 								<form action="" method="POST" enctype=multipart/form-data>
@@ -31,7 +31,7 @@
 										<img src="http://localhost:8080/camagru/filter_images/windows.png" class="supers" width="100" height="100">
 									</div>
 									<div class="buttons is-centered">
-										<button class="button is-centered is-hidden" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
+										<button class="button" type="submit" name="submit_taken" id="submit_taken" style="">Upload Photo</button>
 									</div>
 								</form>
 							</article>

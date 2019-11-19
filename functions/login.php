@@ -4,7 +4,7 @@ function log_in() {
 try {
     include 'connect_to_db.php';
     $username = $_POST['username'];
-    $passwd = hash(SHA256, $_POST['passwd']);
+    $passwd = hash('whirlpool', $_POST['passwd']);
    // echo $username." ".$passwd;
     //   $hash = md5(rand(0, 1000));
 //      $sth = $dbh->prepare('INSERT INTO users (login, mail, passwd, state) VALUES (:login, :mail, :passwd, :hash)');

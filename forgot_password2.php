@@ -24,7 +24,7 @@
     <?php
       if (isset($_POST['change_pass']))
       {
-        include "functions/change_password.php";
+        include_once "functions/change_password.php";
         $ver_key = $_GET['ver_key'];
         $u_email = $_POST['email'];
         $new_pass = hash('whirlpool', $_POST['new_pass']);
@@ -34,3 +34,7 @@
     ?>
   </article>
 </div>
+
+
+
+    <!-- Doesn't change password correctly!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

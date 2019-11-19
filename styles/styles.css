@@ -82,7 +82,7 @@ html {
 }
 
 #snap {
-    margin: auto;
+    margin: 100%;
 }
 
 #video {
@@ -231,7 +231,7 @@ h3 {
     text-align: center;
 }
 
-ul.pagination {
+/* ul.pagination {
     display: inline-block;
     padding: 0;
     margin: 0;
@@ -256,7 +256,7 @@ ul.pagination li a.active {
 
 ul.pagination li a:hover:not(.active) {
     background-color: rgba(180, 180, 180, 0.60);
-}
+} */
 
 
 /******************** css from bulma ********************/

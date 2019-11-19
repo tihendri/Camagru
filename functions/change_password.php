@@ -1,7 +1,7 @@
 <?php
   
 function change_password($new_pass, $ver_key, $u_email) {
-    include_once 'connect_to_db.php';
+    include 'connect_to_db.php';
     $get_data = $conn->prepare("SELECT * FROM camagruers WHERE email=:u_email");
     $get_data->execute(array(':u_email'=>$u_email));
     $u_data = $get_data->fetch();

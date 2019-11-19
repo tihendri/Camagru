@@ -30,21 +30,22 @@
                 include "functions/is_my_post.php";
 								echo "<div class='level'>";
 									if (!is_liked_post($_GET['img'])) {
-										echo "<div class='level-left'><input class='button is-light' type='submit' name='like' value='Like'></div><br/>";
+										echo "<div class='level-left'><input class='button' type='submit' name='like' value='Like'></div><br/>";
 									} else {
-										echo "<div class='level-left'><input class='button is-success' type='submit' name='apathy' value='Unlike'></div><br/>";
+										echo "<div class='level-left'><input class='button' type='submit' name='apathy' value='Unlike'></div><br/>";
 									}
 									if (is_my_post($_GET['img'])) {
-										echo "<div class='level-right'><input class='button is-danger' type='submit' name='delete_post' value='Delete'></div>";
+										echo "<div class='level-right'><input class='button' type='submit' name='delete_post' value='Delete'></div>";
 									}
 								echo "</div>";
 								?>
 								<input class="textarea" type="text" name="cmntContent" placeholder="Write a comment...">
 								<div class="field is-grouped is-grouped-right">
-									<input class="button is-success" type="submit" name="comment" value="Submit Comment">
+									<input class="button" type="submit" name="comment" value="Submit Comment">
 								</div>
 							</form>
 </div>
+<br /><br />
 <header>Comments</header><br />
 <?php
       get_comments($img_id);
