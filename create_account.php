@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"create_account.php\";</script>";}
+  // if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"create_account.php\";</script>";}
   include_once 'header.php';
   include_once "footer.php";
   session_start();
@@ -22,9 +22,6 @@
 
       <label><b>Password</b></label>
       <input class="form" type="password" placeholder="Enter Password" name="passwd" required tabindex="5">
-
-      <!-- <label><b>Retype your password</b></label>
-      <input class="form" type="password" placeholder="Enter Password" name="passwd2" required tabindex="6"> -->
 
       <button type="submit" name="create_account" class="button" tabindex="7">Create Account</button>
     </form>

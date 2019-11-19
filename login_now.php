@@ -1,9 +1,9 @@
 <?php
-include_once 'header.php';
+include_once "header.php";
 include_once "footer.php";
     session_start();
     if ($_SESSION['Username'] && !empty($_SESSION['Username'])):
-    ?>
+?>
       <form class='login' action='functions/disconnect.php' method='post'>
         <h3><?=$_SESSION['Username'];?></h3><br/>
         <button type='submit' class='button'>Sign out</button>
@@ -24,10 +24,10 @@ include_once "footer.php";
         <div class="strike"><span>New?</span></div>
         <button class="button" id="button_new" tabindex="5"><a href="create_account.php">Create your account</a></button>
       </form>
-    <?php endif;
+<?php endif;
     if (isset($_POST['login']))
     {
-          include "functions/login.php";
-          log_in();
+      include "functions/login.php";
+      log_in();
     }
 ?>

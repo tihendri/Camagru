@@ -1,7 +1,7 @@
 <?php
-  if ($_GET[err]) {
-      echo '<script>alert("'.htmlentities($_GET[err]).'");window.location.href = "forgot_password2.php";</script>';
-  }
+  // if ($_GET[err]) {
+  //     echo '<script>alert("'.htmlentities($_GET[err]).'");window.location.href = "forgot_password2.php";</script>';
+  // }
   include_once 'header.php';
   include_once "footer.php";
 ?>

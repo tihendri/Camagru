@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"profile.php\";</script>";}
+  // if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"profile.php\";</script>";}
   include_once "header.php";
   include_once "footer.php";
 ?>
@@ -14,42 +14,35 @@
 </ul>
 <section>
   <div>
-  <?php
+<?php
     if (isset($_SESSION['id'])) {
       include_once "edit_account.php";
     }
     if (isset($_POST['updt_name'])) {
-      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
       include "functions/update_user.php";
       update_user($_SESSION['id']);
     }
     else if (isset($_POST['updt_email'])) {
-      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
       include "functions/update_user.php";
       update_user($_SESSION['id']);
     }
     else if (isset($_POST['updt_passwd'])) {
-      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
       include "functions/update_user.php";
       update_user($_SESSION['id']);
     }
     else if (isset($_POST['updt_notif'])) {
-      // echo"<script>window.alert('bleh blah blah blaaah.')</script>";
       include "functions/update_user.php";
       update_user($_SESSION['id']);
-    }
-    
-  ?>
+    }  
+?>
 
 </div>
-
-
-
 <div class="main" style="text-align:center">
 <?php
 include "functions/img_display.php";
       img_display_user();
 ?>
+
 <?php
     if (isset($_GET['session_status'])) {
       if ($_GET['session_status'] == "logout") {
@@ -59,15 +52,3 @@ include "functions/img_display.php";
     }
 ?>
 </div>
-  <!-- <article class="main">
-    <p></p>
-  </article>
-  <aside class="aside">
-    
-  </aside>
-
-<form action="" method="POST" enctype="multipart/form-data">
-  <input type="file" name="upl_img">
-  <button type="submit" name="upload">Upload</button>
-</form>
-?> -->

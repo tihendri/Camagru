@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"profile.php\";</script>";}
+  // if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"profile.php\";</script>";}
   include_once "header.php";
 ?>
     <head>
@@ -13,5 +13,5 @@
 </style>
 </head>
 <body>
-    <div class="footer">&copy tihendri All Rights Reserved</div>
+    <div class="footer">&copy tihendri</div>
 </body>

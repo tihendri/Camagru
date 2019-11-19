@@ -1,8 +1,4 @@
 <?php
-// include "../backend/connect_to_db.php";
-// if (session_id() === "") {
-//      session_start();
-// }
 if (isset($_POST['submit_taken'])) {
     if (isset($_POST['taken'])) {
         try {

@@ -1,5 +1,4 @@
 <?php
-
 function uploaded_images($user) {
 	try {
 		include 'connect_to_db.php';

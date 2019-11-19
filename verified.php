@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"verified.php\";</script>";}
+  // if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"verified.php\";</script>";}
   include_once "header.php";
   include_once "footer.php";
 ?>

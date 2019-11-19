@@ -1,5 +1,5 @@
 <?php
-  if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"upload_image.php\";</script>";}
+//   if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"upload_image.php\";</script>";}
   include_once "header.php";
   include_once "footer.php";
   include "functions/upload_taken.php";
@@ -40,13 +40,6 @@
 </div>
 <script src="webcam.js"></script>
 <h2>Upload Image</h2>
-  <article class="main">
-    <p></p>
-  </article>
-  <aside class="aside">
-    
-  </aside>
-
 <form action="" method="POST" enctype="multipart/form-data">
   <input type="file" name="upl_img">
   <button type="submit" name="upload">Upload</button>
@@ -61,18 +54,22 @@ if (isset($_POST['upload'])) {
 }
 ?>
 		<h2>Images You've Uploaded</h2>
-		<div class="tile is-10">
+		<div class="main" style="text-align:center">
+			<?php
+			include "functions/img_display.php";
+				img_display_user_limit();
+			?>
+		</div>
+		<!-- <div class="tile is-10">
 			<div class="tile is-parent">
-				<article class="tile is-child box">
+				<article class="tile is-child box"> -->
 					<?php
-						include "functions/img_display.php";
-						img_display_user_limit();
 						if (isset($_POST['updt_name']) || isset($_POST['updt_email']) || isset($_POST['updt_passwd']) || isset($_POST['updt_image']) || isset($_POST['updt_notif'])){
 							update_user($u_data['usr_id']);
 						}
 					?>
-				</article>
-			</div>
+				<!-- </article>
+			</div> -->
 		</div>
 	</body>
 </html>

@@ -1,14 +1,10 @@
-
 <?php
-  if ($_GET[err]){echo " <script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"index.php\";</script>";}
+  // if ($_GET[err]){echo " <script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"index.php\";</script>";}
   include_once "header.php";
   include_once "footer.php";
 ?>
 <title>Camagru | Image</title>
-  <!-- <article class="main"> -->
-  <div class="main" style="text-align:center">
-
-
+<div class="main" style="text-align:center">
 <?php
       if (isset($_POST['comment'])) {
         include "functions/comment_stuff.php";
@@ -23,7 +19,6 @@
       get_image($img_id);
 
 ?>
-
 <div class="comments">
 							<form method="POST">
 								<?php
@@ -57,13 +52,7 @@
         delete_like($_GET['img']);
       }
 ?>
-
-
-
-
-
-
-
+</div>
 <?php
     if (isset($_GET['session_status'])) {
       if ($_GET['session_status'] == "logout") {

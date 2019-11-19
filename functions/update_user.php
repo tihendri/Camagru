@@ -14,6 +14,7 @@ function update_notify($user_id) {
 		$_SESSION['notif'] = 0;
 	}
 }
+
 function update_name($user_id, $new_name) {
 	include 'connect_to_db.php';
 	if (isset($_POST['updt_name'])) {
@@ -24,6 +25,7 @@ function update_name($user_id, $new_name) {
 		echo"<script>window.alert('Username updated.')</script>";
 	}
 }
+
 function update_email($user_id, $new_email) {
 	include 'connect_to_db.php';
 	include_once "verif_email.php";
@@ -33,10 +35,11 @@ function update_email($user_id, $new_email) {
 		$updt_sql = "UPDATE camagruers SET email=:u_email, verified=0, verkey=:new_verif WHERE id=:id";
 		$updt_email = $conn->prepare($updt_sql);
 		$updt_email->execute(array(':u_email'=>$new_email, ':new_verif'=>$new_verif,':id'=>$user_id));
-		verif_email($new_email, $new_verif);//////////////////////verify email needs to be checked ASAP!!!!!!!!!
+		verif_email($new_email, $new_verif);
 		echo "<script>window.alert('Your email has been updated. Check your email for a link to verify your new email.')</script>";
 	}
 }
+
 function update_passwd($user_id, $new_passwd) {
 	include 'connect_to_db.php';
 	if (isset($_POST['updt_passwd'])) {
@@ -46,6 +49,7 @@ function update_passwd($user_id, $new_passwd) {
 		echo "<script>window.alert('Your password has been updated.')</script>";
 	}
 }
+
 // function update_image($user_id, $new_image) {
 // 	include 'connect_to_db.php';
 // 	if (isset($_POST['updt_image'])) {
@@ -56,15 +60,13 @@ function update_passwd($user_id, $new_passwd) {
 // }
 
 function update_user($user_id) {
-	include_once "validation.php";
+	include "validation.php";
 	if (isset($_POST['updt_name'])) {
-		// validate_name($_POST['new_name']);
 		update_name($user_id, $_POST['new_name']);
 	}
 	if (isset($_POST['updt_email'])) {
-		// validate_email($_POST['new_email']);
+		validate_email($_POST['new_email']);
 		update_email($user_id, $_POST['new_email']);
-		// log_out("my_account");
 		echo "<script>window.open('profile.php', '_self')</script>";
 	}
 	if (isset($_POST['updt_passwd'])) {

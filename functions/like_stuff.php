@@ -1,4 +1,5 @@
 <?php
+
 function is_liked_post($img_id) {
 	include 'connect_to_db.php';
 	if (isset($_SESSION['id'])) {
@@ -14,6 +15,7 @@ function is_liked_post($img_id) {
 	}
 	return false;
 }
+
 function post_like($img) {
 	include 'connect_to_db.php';
 	if (isset($_SESSION['id'])) {
@@ -29,6 +31,7 @@ function post_like($img) {
 	}
 	$conn = null;
 }
+
 function delete_like($img) {
 	include 'connect_to_db.php';
 	if (isset($_SESSION['id'])) {
@@ -40,6 +43,7 @@ function delete_like($img) {
 	}
 	$conn = null;
 }
+
 function get_like_count($img_id) {
 	include 'connect_to_db.php';
 	$get_likes_sql = "SELECT * FROM likes WHERE like_img_id=?";

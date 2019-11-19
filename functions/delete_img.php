@@ -1,6 +1,6 @@
 <?php
-//   header("Location: ../gallery.php?page=$_GET[page]");
-//   session_start();
+/*  header("Location: ../gallery.php?page=$_GET[page]");
+  session_start();
   include_once '../config/database.php';
   try {
       $dbh = new PDO("mysql:host=localhost;dbname=camagru", "root", "root1004");
@@ -12,4 +12,7 @@
   } catch (PDOException $e) {
       echo $sql.'<br>'.$e->getMessage();
   }
+  
+  
+*****************************Not Using This File Anymore, using delete_post.php instead******************************/
 ?>

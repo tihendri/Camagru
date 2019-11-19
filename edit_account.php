@@ -1,9 +1,3 @@
-<?php
-
-// include "header.php";
-// include "footer.php";
-// include "functions/update_user.php";
-?>
 <form method="POST" enctype="multipart/form-data">
 	<label class="label">Username:  <?php echo $_SESSION['username'] ?></label>
 	<div class="field has-addons">
@@ -47,20 +41,6 @@
 		</div>
 	</div>
 </form>
-
-<!-- <form method="POST" enctype="multipart/form-data">
-	<label class="label">Profile Picture: </label>
-	<div class="field has-addons">
-		<div class="file has-name">
-			<label class="file-label">
-				<input class="input is-medium" type="file" name="new_image" placeholder="" required/>
-			</label>
-		</div>
-		<div class="control" >
-			<input class="button is-success is-medium" type="submit" name="updt_image" value="Update">
-		</div>
-	</div>
-</form> -->
 <br/>
 <form method="POST">
 	<div class="level">
@@ -77,8 +57,3 @@
 		</div>
 	</div>
 </form>
-
-<?php
-	// include_once "functions/update_user.php";
-	// update_user($_SESSION['id']);
-?>
