@@ -1,4 +1,8 @@
 <?php
+  ////////////////////////////////////////////Not using this file anymore////////////////////////////////////////////
+
+
+
   // if ($_GET[err]){echo "<script>alert(\"".htmlentities($_GET[err])."\");window.location.href = \"forgot_username.php\";</script>";}
   include_once 'header.php';
 ?>

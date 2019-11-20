@@ -34,7 +34,3 @@
     ?>
   </article>
 </div>
-
-
-
-    <!-- Doesn't change password correctly!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
